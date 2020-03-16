@@ -1,7 +1,0 @@
-{
-  "name": "reflectapp",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
