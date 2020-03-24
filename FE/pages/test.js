@@ -1,7 +1,7 @@
 
 import Layout from '../components/Layout'
 import fetch from 'node-fetch'
-import { db } from '../lib/db.js'
+//import { db } from '../lib/db.js'
 
 export default function Test({ locations }) {
   return (
@@ -19,6 +19,7 @@ export default function Test({ locations }) {
 
  export async function getStaticProps() {
    const resp = await fetch('http://localhost:3000/api/location')
+   console.log(resp)
    const locations = await resp.json()
    return {
     props: {
