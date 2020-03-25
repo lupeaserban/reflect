@@ -1,12 +1,11 @@
 import Layout from '../components/Layout';
 
 
-const Account = () => {
-  let userData = {}
-
+const Account = ({props}) => {
   return (
     <Layout>
       <p>This isi it</p>
+      <p>masa</p>
     </Layout>
   );
 }

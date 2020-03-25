@@ -1,22 +1,20 @@
-import firestore from './db'
+import { db,  } from './db'
 
 async function getAllLocations() {
-  const db = await firestore.firestore()
-  var locationsRef = db.collection('locations');
-  var allLocations = []
-  locationsRef.get()
+  const locationsRef = db.collection('locations');
+  let data = await locationsRef.get()
     .then(snapshot => {
-      console.log(snapshot)
+      const allLocations = []
       snapshot.forEach(doc => {
-        console.log('here')
         allLocations.push(doc.data())
-        //console.log(doc.id, '=>', doc.data());
+
       });
       return allLocations
     })
     .catch(err => {
       console.log('Error getting documents', err);
     });
+    return data
 }
 
 module.exports = { getAllLocations }

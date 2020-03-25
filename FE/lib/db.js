@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase'
 import 'firebase/firestore'
 
 try {
@@ -13,9 +13,9 @@ try {
   }
 }
 
-const firestore = firebase.firestore()
+const db = firebase.firestore()
 
-export default { firebase, firestore }
+module.exports = { db }
 
 // function db() {
 //   if (!firebase.apps.length) {

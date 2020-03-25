@@ -11,8 +11,8 @@ const PlacesAutocomplete = () => {
     clearSuggestions
   } = usePlacesAutocomplete({
     requestOptions: {
-      // location: { lat:46.7730, lng:23.5962},
-      // radius: 10000,
+      location: { lat:46.7730, lng:23.5962},
+      radius: 10000,
       // types: "establishment",
       offset: 4
     },

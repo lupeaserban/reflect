@@ -1,15 +1,9 @@
-import Head from 'next/head';
 import Layout from '../components/Layout'
 import PlacesAutocomplete from '../components/PlacesAutocomplete'
 
 export default function Index() {
   return (
     <Layout>
-      <Head>
-        <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDELF0plHfFSzpmbFz8GEAUl5j_KNKAxSM&libraries=places">
-        </script>
-      </Head>
       <PlacesAutocomplete />
     </Layout>
   );
