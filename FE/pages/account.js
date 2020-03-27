@@ -1,11 +1,14 @@
 import Layout from '../components/Layout';
+import Login from '../components/Login'
 
 
 const Account = ({props}) => {
   return (
     <Layout>
-      <p>This isi it</p>
-      <p>masa</p>
+      <p>Account</p>
+      <Login>
+        
+      </Login>
     </Layout>
   );
 }

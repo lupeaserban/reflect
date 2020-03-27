@@ -1,16 +1,16 @@
 import GoogleLogin from 'react-google-login'
 import { useRouter } from 'next/router'
-//import React, { useState } from 'react'
+import React, { useState } from 'react'
+import ProfileDetails from './ProfileDetails'
+import { isEmpty } from 'lodash'
 
 
-const Login = ({href}) => {
+const Login = ({ href }) => {
   const router = useRouter()
-
-  let profileObj = {}
+  const [profileObj, setProfileObj] = useState({})
 
   const responseGoogle = (response) => {
-    profileObj = response.profileObj
-    router.push(href)
+    setProfileObj(response.profileObj)
   }
 
   const failGoogle = (response) => {
@@ -18,6 +18,7 @@ const Login = ({href}) => {
   }
 
   return (
+    <div>
       <GoogleLogin
         clientId="591615586801-jt473emak2kluka567ch21om85n8ps0b.apps.googleusercontent.com"
         buttonText="Login"
@@ -26,6 +27,8 @@ const Login = ({href}) => {
         onFailure={failGoogle}
       >
       </GoogleLogin>
+      {!isEmpty(profileObj) ? <ProfileDetails props={profileObj} /> : <p></p>}
+    </div>
   );
 }
 

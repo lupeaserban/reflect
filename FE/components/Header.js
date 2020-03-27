@@ -16,7 +16,10 @@ const Header = () => (
     <Link href="/forBusinessOwners">
       <a style={linkStyle}>For Business Owners</a>
     </Link>
-    <Login href="/account"/>
+    <Link href="/account">
+      <a style={linkStyle}>Sign In</a>
+    </Link>
+    {/* <Login href="/account"/> */}
   </div>
 );
 
