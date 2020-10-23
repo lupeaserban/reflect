@@ -11,7 +11,7 @@ const Layout = props => (
   <div style={layoutStyle}>
     <Head>
         <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDELF0plHfFSzpmbFz8GEAUl5j_KNKAxSM&libraries=places" key="viewport">
+          src="https://maps.googleapis.com/maps/api/js?key='api_key'&libraries=places" key="viewport">
         </script>
       </Head>
     <Header />
