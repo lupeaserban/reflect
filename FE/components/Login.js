@@ -18,17 +18,17 @@ const Login = () => {
   return (
     <div>
        <GoogleLogin
-        clientId="591615586801-jt473emak2kluka567ch21om85n8ps0b.apps.googleusercontent.com"
+        clientId=""
         buttonText="Login"
-        clientSecret="ZjW-HBvyBcVWbBq4VP72DG8B"
+        clientSecret=""
         onSuccess={responseGoogle}
         onFailure={failGoogle}
         isSignedIn={true}
       >
       </GoogleLogin>
       <GoogleLogout 
-        clientId="591615586801-jt473emak2kluka567ch21om85n8ps0b.apps.googleusercontent.com"
-        clientSecret="ZjW-HBvyBcVWbBq4VP72DG8B"
+        clientId=""
+        clientSecret=""
         buttonText="Logout"
         />
       {!isEmpty(profileObj) ? <ProfileDetails props={profileObj} /> : <p>You are not logged in</p>}
